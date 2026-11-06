@@ -1,0 +1,37 @@
+project:
+  name: SMS Spam Detection MLOps
+  random_state: 42
+data:
+  raw_path: data/raw/spam.csv
+  processed_dir: data/processed
+  target_column: label
+  text_column: message
+  test_size: 0.20
+model:
+  name: sms_spam_classifier
+  max_features: 5000
+  ngram_range: [1, 2]
+  min_df: 2
+  max_iter: 1000
+mlflow:
+  tracking_uri: sqlite:///artifacts/mlflow.db
+  experiment_name: SMS_Spam_Detection
+registry:
+  model_name: SMS_Spam_Production_Model
+  alias: champion
+quality_gate:
+  metric: f1_score
+  minimum_value: 0.80
+paths:
+  model: models/sms_spam_pipeline.pkl
+  evaluation_report: reports/evaluation_report.json
+  quality_gate_report: reports/quality_gate_report.json
+  lifecycle_report: reports/lifecycle_report.json
+  failure_report: reports/failure_report.json
+  inference_output: outputs/inference_predictions.csv
+  drift_report: outputs/drift/data_drift_report.json
+lab9:
+  repetitions: 1
+api:
+  host: 0.0.0.0
+  port: 8000

@@ -1,0 +1,6 @@
+# Build and deploy (run only after configuring Docker and a Kubernetes cluster)
+docker build -t sms-spam-api:latest .
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+kubectl get pods
+kubectl get services

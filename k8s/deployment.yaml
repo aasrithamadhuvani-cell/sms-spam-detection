@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sms-spam-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sms-spam-api
+  template:
+    metadata:
+      labels:
+        app: sms-spam-api
+    spec:
+      containers:
+        - name: sms-spam-api
+          image: sms-spam-api:latest
+          ports:
+            - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sms-spam-service
+spec:
+  selector:
+    app: sms-spam-api
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: ClusterIP

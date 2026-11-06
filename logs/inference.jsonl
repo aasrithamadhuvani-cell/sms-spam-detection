@@ -1,0 +1,2 @@
+{"message_length": 72, "prediction": "spam", "spam_probability": 0.6866693084887615, "latency_ms": 152.398, "status": "success", "timestamp": "2026-11-06T14:44:09.769467+00:00"}
+{"message_length": 43, "prediction": "ham", "spam_probability": 0.2707398469323998, "latency_ms": 12.366, "status": "success", "timestamp": "2026-11-06T14:44:09.793120+00:00"}

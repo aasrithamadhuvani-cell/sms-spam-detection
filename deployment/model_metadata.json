@@ -1,0 +1,5 @@
+{
+  "model_name": "SMS_Spam_Production_Model",
+  "model_uri": "models:/SMS_Spam_Production_Model@champion",
+  "stage": "champion alias"
+}

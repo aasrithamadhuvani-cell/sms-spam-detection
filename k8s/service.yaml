@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sms-spam-service
+spec:
+  selector:
+    app: sms-spam-api
+  ports:
+    - port: 80
+      targetPort: 8000
+  type: ClusterIP

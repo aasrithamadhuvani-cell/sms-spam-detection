@@ -1,0 +1,6 @@
+{
+  "baseline_mean_token_count": 15.448609431680774,
+  "current_mean_token_count": 15.405222437137331,
+  "absolute_mean_difference": 0.04338699454344308,
+  "note": "Text-length proxy only; compare production samples for operational drift."
+}

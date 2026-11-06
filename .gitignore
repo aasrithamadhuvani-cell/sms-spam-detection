@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+mlruns/
+artifacts/mlflow.db
+*.log
+data/raw/spam.csv
+data/processed/*.csv
+data/processed/*.json
+models/*.pkl
+deployment/*.pkl
+outputs/*.csv
+outputs/*.json
+reports/*.json
